@@ -30,7 +30,7 @@ function Founder() {
   className='w-[180px] lg:w-[230px] lg:h-[230px] rounded-sm' 
   style={{ boxShadow: 'rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px' }} 
 />
-<p className='text-center font-semibold text-lg font-serif py-3 md:text-sm lg:text-base text-gray-900'>B.S Abdul Rahman</p>
+<p className='text-center font-bold text-lg font-serif py-3 md:text-sm lg:text-base text-gray-900'>B.S Abdul Rahman</p>
 
         </div>
       <div className='flex flex-col gap-2 md:w-3/4'>

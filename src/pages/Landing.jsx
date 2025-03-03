@@ -48,7 +48,7 @@
 
 
 import React, { useEffect } from "react";
-import { Bg_Carousel } from "../Components/Home/Bg_Carousel";
+import BgCarousel  from "../Components/Home/Bg_Carousel";
 import Button from "../Components/ui/Button";
 import { Link } from "react-router-dom";
 import Gallerysample from "../Components/Home/Gallerysample";
@@ -62,7 +62,7 @@ function Landing() {
 
   return (
     <div className="bg-[#EDF0F2]">
-      <Bg_Carousel />
+      <BgCarousel />
 
       <div className="flex justify-center pt-14">
         {/* <Button name={"Online Admissions"} /> */}
