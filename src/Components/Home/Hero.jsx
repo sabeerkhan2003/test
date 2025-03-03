@@ -29,7 +29,7 @@ function Hero() {
           {heroContent.intro.paragraphs[0]}
         </h1>
 
-        <div className="md:flex md:gap-10 xl:gap-16 justify-center">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-10 xl:gap-16 justify-center">
           {/* Vision */}
           <div
             className="space-y-5 md:w-[50%] 2xl:w-full p-6 bg-white/10 rounded-xl shadow-lg backdrop-blur-lg transition-all duration-500 ease-in-out hover:scale-105"
