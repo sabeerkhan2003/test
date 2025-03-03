@@ -1,5 +1,5 @@
 import React from 'react';
-import bgImage from '../../assets/Image_slider/1.webp';
+import bgImage from '../../../public/1.webp';
 
 function Chooseus() {
   const heroContent = {
@@ -28,15 +28,15 @@ function Chooseus() {
         style={{ backgroundImage: `url(${bgImage})` }}
       />
       <div className="relative z-10 text-center py-16 px-6 lg:px-20">
-        <h1 className="text-4xl font-bold text-yellow-300 mb-10">Why Choose Us</h1>
+        <h1 className="text-4xl font-bold text-yellow-300 mb-10 font-opensans">Why Choose Us</h1>
         <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
           {Object.values(heroContent).map((item, index) => (
             <div
               key={index}
-              className="space-y-5 p-6 bg-white/10 rounded-xl shadow-lg backdrop-blur-lg transition-all duration-500 ease-in-out hover:scale-105"
+              className="space-y-5 p-6 bg-white/10 rounded-xl shadow-lg backdrop-blur-sm transition-all duration-500 ease-in-out hover:scale-105"
             >
-              <h2 className="text-2xl font-bold text-yellow-300">{item.title}</h2>
-              <p className="text-lg leading-relaxed">{item.description}</p>
+              <h2 className="text-2xl font-bold text-yellow-300 font-opensans">{item.title}</h2>
+              <p className="text-lg leading-relaxed font-opensans">{item.description}</p>
             </div>
           ))}
         </div>

@@ -64,7 +64,7 @@ function Gallerysample() {
       <div
         ref={scrollContainerRef}
         onDoubleClick={handleDoubleClick}
-        className="flex overflow-x-scroll xl:ml-16 lg:w-auto md:gap-8 py-10 lg:gap-8 lg:mx-12 xl:mx-16 2xl:gap-24 2xl:mx-48 gap-12 relative justify-center md:justify-start lg:justify-start md:m-12 lg:m-8 scrollbar-hide cursor-pointer"
+        className="flex overflow-x-scroll  xl:ml-16 lg:w-auto md:gap-8 py-10 lg:gap-8 lg:mx-12 xl:mx-16 2xl:gap-24 2xl:mx-48 gap-12 relative justify-center md:justify-start lg:justify-start md:m-12 lg:m-8 scrollbar-hide cursor-pointer"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none", scrollBehavior: "smooth" }}
       >
         {images.map((item, index) => (
@@ -72,7 +72,7 @@ function Gallerysample() {
             <img
               src={item}
               alt={`Image ${index + 1}`}
-              className="rounded-3xl h-[250px] w-[340px] md:w-[320px] lg:w-[280px] object-cover transition-all duration-700 hover:scale-110"
+              className="rounded-3xl relative left-48 md:left-0 h-[250px] w-[340px] md:w-[320px] lg:w-[280px] object-cover transition-all duration-700 hover:scale-110"
             />
           </div>
         ))}
