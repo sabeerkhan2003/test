@@ -1,4 +1,4 @@
-import bgImage from '../../assets/Bg-Img/BG2.WEBP';
+import bgImage from '../../assets/Bg-Img/BG2.webp';
 import Founder from './Founder';
 import Hero from './Hero';
 
