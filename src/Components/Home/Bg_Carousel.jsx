@@ -38,7 +38,7 @@ export function Bg_Carousel() {
       ))}
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-400 to-blue-500 opacity-45 mix-blend-multiply"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-400 to-blue-500 opacity-60 blur-lg mix-blend-multiply"></div>
 
       {/* Hero Text */}
       
