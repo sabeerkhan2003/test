@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Nav2 from "./Nav2";
 import ApplyNowButton from "../ui/ApplyButton";
 
-// Image paths from `public/assets/`
 const imagePaths = [
   "../../../1.webp",
   "../../../2.webp",
@@ -23,23 +22,24 @@ function BgCarousel() {
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      {/* Background Images */}
+
       {imagePaths.map((img, index) => (
-        <img
-          key={index}
-          src={img}
-          alt={`Slide ${index}`}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-            index === currentIndex ? "opacity-100" : "opacity-0"
-          }`}
-          loading="lazy"
-        />
+       <img
+       key={index}
+       src={img}
+       alt={`Slide ${index}`}
+       className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 blur-[2px] ${
+         index === currentIndex ? "opacity-100" : "opacity-0"
+       }`}
+       loading="lazy"
+     />
+     
       ))}
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-400 to-blue-500 opacity-65 blur-lg mix-blend-multiply"></div>
 
-      {/* Hero Text */}
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-400 to-blue-400 opacity-90  mix-blend-multiply"></div>
+
+
       <div className="absolute inset-0 font-opensans flex flex-col items-center justify-center text-white text-center">
         <h1 className="text-4xl lg:text-5xl font-bold drop-shadow-xl">
           Welcome to <br />
