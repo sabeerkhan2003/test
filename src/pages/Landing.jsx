@@ -18,7 +18,7 @@
 //   useEffect(() => {
 //     window.scrollTo(0, 0);
 //   }, []);
-  
+
 //   return (
 //     <>
 //       {/* <HomePopUp/> */}
@@ -38,7 +38,7 @@
 //       <Link to="/gallery"><Button name={"View more"} /></Link></div>
 //       </div>
 //       </div>
-      
+
 //     </>
 //   );
 // }
@@ -48,7 +48,7 @@
 
 
 import React, { useEffect } from "react";
-import BgCarousel  from "../Components/Home/Bg_Carousel";
+import BgCarousel from "../Components/Home/Bg_Carousel";
 import Button from "../Components/ui/Button";
 import { Link } from "react-router-dom";
 import Gallerysample from "../Components/Home/Gallerysample";
@@ -61,19 +61,13 @@ function Landing() {
   // }, []);
 
   return (
-    <div className="bg-[#EDF0F2]">
+    <>
       <BgCarousel />
-
-      <div className="flex justify-center pt-14">
+      {/* <div className="flex justify-center pt-14"> */}
         {/* <Button name={"Online Admissions"} /> */}
-      </div>
-
+      {/* </div> */}
       <Vismis />
-
-      <div className="my-20">
-        <Chooseus />
-      </div>
-
+      <Chooseus />
       <div className="py-5">
         <Gallerysample />
         <div className="flex justify-center py-10 md:pb-10">
@@ -82,7 +76,8 @@ function Landing() {
           </Link>
         </div>
       </div>
-    </div>
+
+    </>
   );
 }
 

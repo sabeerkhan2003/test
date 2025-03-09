@@ -15,15 +15,15 @@ function Footer() {
                 {/* <p className='font-opensans text-white lg:w-  text-[15px] md:text-[16px] leading-loose '>
                     KBA Arabic College is a 25-years old educational institution founded in 2000 by Alhaj Dr. B.S Abdur Rahman, a Visionary With a Missionary Zeal and run by the All India Islamic Foundation.
                 </p> */}
-                <div className='lg:relative  md:pr-0 lg:mr-36 bottom-2 xl:bottom-4 2xl:bottom-2 md:ml-[40%] lg:ml-10  xl:ml-0 w-[150px]  '>
+                <div className='lg:relative  pr-10 md:pr-0 lg:mr-36 bottom-2 xl:bottom-4 2xl:bottom-2 md:ml-[40%] lg:ml-10  xl:ml-0 w-[150px]  '>
                     <Socialicons />
                 </div>
             </div>
             <div className='text-white mx-5 lg:px-5 lg:mx-5 xl:px-0 lg:mr-16 xl:mr-52 2xl:mr-80 2xl:-mx-10 2xl:ml-16  flex flex-col md:gap-2 lg:gap-5 xl:gap-5 '>
-                <h2 className='text-[18px] md:text-2xl font-montserrat mb-8 pt-8 lg:mb-0 lg:pt-0  lg:my-5 xl:my-0 2xl:text-3xl '>Sitemap</h2>
-                <ul className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-y-2 mr-16 md:mr-0  lg:mt-0 text-[15px] md:text-[14px] md:pl-10 lg:pl-0 2xl:pt-4'>
+                <h2 className='text-[20px] md:text-2xl  mb-8 pt-8 lg:mb-0 lg:pt-0  lg:my-5 xl:my-0 2xl:text-3xl font-roboto '>Sitemap</h2>
+                <ul className='grid grid-cols-2 w-56 font-roboto  md:grid-cols-3 lg:grid-cols-2 gap-y-2 mr-20 gap-x-0 md:mr-0  lg:mt-0 text-[15px] md:text-[14px] md:pl-10 lg:pl-0 2xl:pt-4'>
                     {siteMap.map((item, index) => (
-                        <li className='flex h-8' key={index}>
+                        <li className='flex h-7' key={index}>
                             <a href={item.link} className=' hover:text-[#125B9E] hover:scale-x-110 hover:pl-2 hover:transition-all duration-300 2xl:text-xl'>
                                 {item.name}
                             </a>
@@ -34,22 +34,22 @@ function Footer() {
             </div>
 
             <div className='text-white mx-4 flex flex-col gap-y-6 md:gap-6 xl:gap-5 xl:relative xl:right-24 xl:bottom-2 2xl:bottom-1 2xl:mx-0 text-[15px] w-full xl:w-[470px] 2xl:w-[800px] md:text-[16px]  lg:pb-0 lg:px-0 lg:mx-0 lg:gap-[12px]'>
-                <h2 className='text-[18px] md:text-2xl font-montserrat mb-4 pt-8 lg:mb-0 lg:pt-0  lg:my-5 xl:my-0 2xl:text-3xl '>Contact Us</h2>
+                <h2 className='text-[20px] md:text-2xl font-roboto mb-4 pt-8 lg:mb-0 lg:pt-0  lg:my-5 xl:my-0 2xl:text-3xl '>Contact Us</h2>
                    <div className='flex flex-col gap-4 lg:gap-3 xl:gap-4 md:pl-10 lg:pl-0 2xl:pt-4'>
                 <div className='flex items-center lg:items-center gap-3 md:gap-3 lg:gap-4 hover:text-[#125B9E] hover:pl-2 hover:transition-all duration-300  '>
                     <Icon icon="ic:twotone-location-on" width="26" height="26" style={{ color: '#125B9E' }} className='lg:relative lg:right-1 ' />
-                    <a href='https://maps.app.goo.gl/NqfMLeiHFmS8kPdr8' className=' w-4/5 md:w-3/4 lg:w-full md:text-[14px] 2xl:text-xl'>KBA Arabic College, Crescent Campus, Vandalur, Chennai - 600 048</a>
+                    <a href='https://maps.app.goo.gl/NqfMLeiHFmS8kPdr8' className=' w-4/5 md:w-3/4 lg:w-full md:text-[14px] 2xl:text-xl font-roboto'>KBA Arabic College, Crescent Campus, Vandalur, Chennai - 600 048</a>
                 </div>
                 <div className='flex items-center gap-4 md:gap-4 hover:text-[#125B9E] text-[14px] hover:pl-2 hover:transition-all duration-300'>
                     <Icon icon="ic:baseline-settings-phone" width="20" height="20" style={{ color: '#125B9E' }} />
                     <div className='flex flex-col md:flex-row md:gap-4 2xl:text-xl'>
-                        <a href="tel:+914422751280">+91-44-22751280</a>
-                        <a href="tel:+914422751282">+91-44-22751282</a>
+                        <a href="tel:+914422751280 font-roboto">+91-44-22751280</a>
+                        <a href="tel:+914422751282 font-roboto">+91-44-22751282</a>
                     </div>
                 </div>
                 <div className='flex items-center gap-4 md:gap-4 lg:gap-5 hover:text-[#125B9E] md:text-[14px] hover:pl-2 hover:transition-all duration-300 2xl:text-xl'>
                     <Icon icon="ic:baseline-mail-outline" width="20" height="20" style={{ color: '#125B9E' }} />
-                    <a href="mailto:office.kbacollege@gmail.com ">office.kbacollege@gmail.com</a>
+                    <a href="mailto:office.kbacollege@gmail.com font-roboto">office.kbacollege@gmail.com</a>
                 </div>
                 </div> 
             </div>

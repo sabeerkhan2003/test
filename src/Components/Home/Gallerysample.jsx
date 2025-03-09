@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 
 import i1 from "../../assets/Gallery Pics/1.webp";
 import i2 from "../../assets/Gallery Pics/2.webp";
@@ -14,43 +14,50 @@ import i11 from "../../assets/Gallery Pics/11.webp";
 import i12 from "../../assets/Gallery Pics/12.webp";
 import i13 from "../../assets/Gallery Pics/13.webp";
 import i14 from "../../assets/Gallery Pics/14.webp";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 function Gallerysample() {
-  const images = [i1, i2, i3, i4, i5, i6,i7,i8,i9,i10,i11,i12,i13,i14];
+  const images = [i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14];
   const scrollContainerRef = useRef(null);
   const [autoScroll, setAutoScroll] = useState(false);
-  const scrollInterval = 3000; // Interval of 3 seconds
-  
-  useEffect(() => {
+  const scrollSpeed = 2; // Adjust speed for smoothness
+
+  // Function to scroll smoothly using requestAnimationFrame
+  const smoothScroll = useCallback(() => {
     const scrollContainer = scrollContainerRef.current;
-    let intervalId;
+    if (!scrollContainer || !autoScroll) return;
 
-    if (autoScroll) {
-      intervalId = setInterval(() => {
-        if (scrollContainer) {
-          const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-          if (scrollContainer.scrollLeft >= maxScrollLeft) {
-            scrollContainer.scrollTo({ left: 0, behavior: "smooth" });
-          } else {
-            scrollContainer.scrollBy({ left: scrollContainer.clientWidth, behavior: "smooth" });
-          }
-        }
-      }, scrollInterval);
+    let start;
+    function step(timestamp) {
+      if (!start) start = timestamp;
+      const progress = timestamp - start;
+
+      scrollContainer.scrollLeft += scrollSpeed; // Adjust speed for smoothness
+
+      if (progress < 1000) {
+        requestAnimationFrame(step);
+      } else {
+        start = null;
+        requestAnimationFrame(step);
+      }
     }
-
-    return () => clearInterval(intervalId);
+    requestAnimationFrame(step);
   }, [autoScroll]);
 
-  const handleDoubleClick = () => {
-    setAutoScroll(!autoScroll);
-  };
-
   useEffect(() => {
-    window.scrollTo(0, 0); // Scrolls to the top when the component mounts
-  }, []);
+    let scrollInterval;
+    if (autoScroll) {
+      scrollInterval = setInterval(() => smoothScroll(), 20); // Smoother small increments
+    }
+    return () => clearInterval(scrollInterval);
+  }, [autoScroll, smoothScroll]);
+
+  const handleDoubleClick = () => setAutoScroll(!autoScroll);
 
   return (
     <> 
+ 
+
       <div className="relative w-fit my-5 md:my-0 mx-auto">
         <h1 className="absolute text-2xl lg:text-3xl sm:text-lg font-Roboto font-bold text-blue-950 top-4 -left-3 md:top-6 md:left-[12%] lg:-left-0">
           Gallery
@@ -65,14 +72,16 @@ function Gallerysample() {
         ref={scrollContainerRef}
         onDoubleClick={handleDoubleClick}
         className="flex overflow-x-scroll  xl:ml-16 lg:w-auto md:gap-8 py-10 lg:gap-8 lg:mx-12 xl:mx-16 2xl:gap-24 2xl:mx-48 gap-12 relative justify-center md:justify-start lg:justify-start md:m-12 lg:m-8 scrollbar-hide cursor-pointer"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none", scrollBehavior: "smooth" }}
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {images.map((item, index) => (
-          <div key={index} className="relative flex-shrink-0 transition-transform duration-700 ease-in-out">
+          <div key={index} className="relative flex-shrink-0 snap-center transition-transform duration-700 ease-in-out">
             <img
               src={item}
               alt={`Image ${index + 1}`}
               className="rounded-3xl relative left-48 md:left-0 h-[250px] w-[340px] md:w-[320px] lg:w-[280px] object-cover transition-all duration-700 hover:scale-110"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         ))}

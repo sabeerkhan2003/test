@@ -20,9 +20,10 @@ export default {
         },
       },
       fontFamily: {
-        'opensans': ['Open Sans'],
-        'montserrat':['Montserrat'],
-        'Roboto':['Roboto']
+        opensans: ['"Open Sans"', 'sans-serif'],
+        montserrat: ['"Montserrat"', 'sans-serif'],
+        roboto: ['"Roboto"', 'sans-serif'],
+        bebas: ['"Bebas Neue"', 'sans-serif'],
       },
     },
   },

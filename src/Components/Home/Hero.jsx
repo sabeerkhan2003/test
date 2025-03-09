@@ -32,24 +32,24 @@ function Hero() {
         <div className="flex flex-col md:flex-row gap-8 md:gap-10 xl:gap-16 justify-center">
           {/* Vision */}
           <div
-            className="space-y-5 md:w-[50%] 2xl:w-full p-6 bg-white/10 rounded-xl shadow-lg backdrop-blur-lg transition-all duration-500 ease-in-out hover:scale-105"
+            className="space-y-5 md:w-[50%] 2xl:w-full p-4 bg-white/10 rounded-xl shadow-lg backdrop-blur-md transition-all duration-500 ease-in-out hover:scale-105"
           >
-            <h2 className="text-2xl font-bold text-yellow-300">
+            <h2 className="text-3xl font-bold font-bebas tracking-wider text-yellow-300">
               {heroContent.vision.title}
             </h2>
-            <p className="text-lg leading-relaxed">
+            <p className="font-bebas text-lg tracking-wide">
               {heroContent.vision.description}
             </p>
           </div>
 
           {/* Mission */}
           <div
-            className="space-y-5 md:w-[50%] 2xl:w-full p-6 bg-white/10 rounded-xl shadow-lg backdrop-blur-lg transition-all duration-500 ease-in-out hover:scale-105"
+            className="space-y-5 md:w-[50%] 2xl:w-full p-4 bg-white/10 rounded-xl shadow-lg backdrop-blur-md transition-all duration-500 ease-in-out hover:scale-105"
           >
-            <h2 className="text-2xl font-bold text-yellow-300">
+            <h2 className="text-3xl font-bold font-bebas tracking-wider text-yellow-300">
               {heroContent.mission.title}
             </h2>
-            <p className="text-lg leading-relaxed">
+            <p className="font-bebas text-lg tracking-wide">
               {heroContent.mission.description}
             </p>
           </div>

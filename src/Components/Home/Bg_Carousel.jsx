@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Nav2 from "./Nav2";
 import ApplyNowButton from "../ui/ApplyButton";
 
@@ -11,16 +11,28 @@ const imagePaths = [
 
 function BgCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef(null);
 
+  const preloadImage = useCallback((index) => {
+    const img = new Image();
+    img.src = imagePaths[index];
+  }, []);
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % imagePaths.length);
+    preloadImage((currentIndex + 1) % imagePaths.length);
+
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % imagePaths.length;
+        preloadImage(nextIndex);
+        return nextIndex;
+      });
     }, 4000);
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(intervalRef.current);
+  }, [currentIndex, preloadImage]);
 
   return (
+    <>
     <div className="relative w-full h-screen overflow-hidden">
 
       {imagePaths.map((img, index) => (
@@ -28,7 +40,7 @@ function BgCarousel() {
        key={index}
        src={img}
        alt={`Slide ${index}`}
-       className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 blur-[2px] ${
+       className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 blur-[1px] ${
          index === currentIndex ? "opacity-100" : "opacity-0"
        }`}
        loading="lazy"
@@ -40,12 +52,12 @@ function BgCarousel() {
       <div className="absolute inset-0 bg-gradient-to-b from-blue-400 to-blue-400 opacity-90  mix-blend-multiply"></div>
 
 
-      <div className="absolute inset-0 font-opensans flex flex-col items-center justify-center text-white text-center">
-        <h1 className="text-4xl lg:text-5xl font-bold drop-shadow-xl">
+      <div className="absolute inset-0 font-opensans flex flex-col items-center justify-center text-white text-center mx-4">
+        <h1 className="text-2xl lg:text-5xl font-bold drop-shadow-xl">
           Welcome to <br />
           <span className="text-white">Kilakarai Bukhari Aalim Arabic College</span>
         </h1>
-        <p className="text-3xl font-opensans lg:text-4xl font-bold mt-4">
+        <p className="text-2xl font-opensans lg:text-4xl font-bold mt-4">
           Admissions <span className="text-red-500">Open 2025</span>
         </p>
         <a
@@ -57,7 +69,7 @@ function BgCarousel() {
           <ApplyNowButton />
         </a>
       </div>
-    </div>
+    </div></>
   );
 }
 

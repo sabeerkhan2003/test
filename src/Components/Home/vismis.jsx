@@ -4,6 +4,7 @@ import Hero from './Hero';
 
 function Vismis() {
   return (
+    <>
     <div className="relative w-full min-h-screen text-white pt-10">
       
       {/* Founder (No Background Image) */}
@@ -21,6 +22,7 @@ function Vismis() {
       </div>
 
     </div>
+    </>
   );
 }
 
