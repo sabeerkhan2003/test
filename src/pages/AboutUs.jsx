@@ -38,7 +38,8 @@ function AboutUs() {
     <>  
       <div className='pt-32 bg-[#EDF0F2]'>
         <h3 className='text-[24px] font-semibold text-center m-5 lg:my-5'>
-          WELCOME TO <span className='uppercase text-red-500'>Kilakarai Bukhari Aalim Arabic College</span>
+          WELCOME TO 
+          <span className='uppercase text-red-500'>Kilakarai Bukhari Aalim Arabic College</span>
         </h3>
         <About />
         {/* <div className='m-6 md:mx-auto w-fit'>

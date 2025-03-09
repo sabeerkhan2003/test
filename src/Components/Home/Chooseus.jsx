@@ -29,7 +29,7 @@ function Chooseus() {
         style={{ backgroundImage: `url(${bgImage})` }}
       />
       <div className="relative z-10 text-center py-16 px-6 lg:px-20">
-        <h1 className="text-4xl font-bold text-[#EF4142] mb-10 font-opensans">Why Choose Us</h1>
+        <h1 className="text-4xl font-bold text-yellow-300 mb-10 font-bebas tracking-wider">Why Choose Us</h1>
         <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
           {Object.values(heroContent).map((item, index) => (
             <div
@@ -37,7 +37,7 @@ function Chooseus() {
               className="space-y-5 p-6 bg-white/10 rounded-xl shadow-lg backdrop-blur-sm transition-all duration-500 ease-in-out hover:scale-105"
             >
               <h2 className="text-[1.5rem] font-bold font-bebas tracking-wider text-yellow-300">{item.title}</h2>
-              <p className="font-bebas text-lg tracking-wider">{item.description}</p>
+              <p className="font-bebas text-lg xl:text-xl tracking-wider">{item.description}</p>
             </div>
           ))}
         </div>

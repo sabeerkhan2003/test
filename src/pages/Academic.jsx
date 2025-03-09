@@ -31,7 +31,7 @@ function Academic() {
   return (
     <div className='bg-[#EDF0F2] pt-32 md:pt-0 pb-16'>
       
-      <div className='bg-[#EDF0F2] lg:px-20  '>
+      {/* <div className='bg-[#EDF0F2] lg:px-20  '>
         <div className='md:pt-32 lg:pt-44 px-6 py-0 '>
           <h5 className='text-[#07294D] text-[18px]  font-bold font-montserrat'>Academic</h5>
           <hr className='border-[#07294D] border-2 my-2 w-10' />
@@ -49,10 +49,12 @@ function Academic() {
 
         </div>
  
-      {/* <Link to="/faculty"><Button name={"Faculty"}/> </Link><br /> */}
-      {/* <Link to="/admission"><Button name={"Admissions"}/></Link> */}
+      <Link to="/faculty"><Button name={"Faculty"}/> </Link><br />
+      <Link to="/admission"><Button name={"Admissions"}/></Link>
       
-      </div>
+      </div> */}
+
+      
       <Programs/>
       {/* <SampleFaculty/> */}
       <SampleAdmissions/>

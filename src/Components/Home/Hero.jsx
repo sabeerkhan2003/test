@@ -19,7 +19,7 @@ const heroContent = {
 
 function Hero() {
   return (
-    <div className="relative text-white py-16 lg:pt-16 xl:pt-28 px-6 lg:px-20 flex items-center justify-center my-auto">
+    <div className="relative text-white py-16  lg:pt-16 xl:pt-40 px-6 lg:px-20 flex items-center justify-center my-auto">
       {/* Main Content */}
       <div
         className="relative md:max-w-2xl lg:max-w-4xl mx-auto text-center space-y-10 animate-fade-in-up"
@@ -34,10 +34,10 @@ function Hero() {
           <div
             className="space-y-5 md:w-[50%] 2xl:w-full p-4 bg-white/10 rounded-xl shadow-lg backdrop-blur-md transition-all duration-500 ease-in-out hover:scale-105"
           >
-            <h2 className="text-3xl font-bold font-bebas tracking-wider text-yellow-300">
+            <h2 className="text-3xl font-bold font-bebas tracking-wider xl:tracking-widest text-yellow-300">
               {heroContent.vision.title}
             </h2>
-            <p className="font-bebas text-lg tracking-wide">
+            <p className="font-bebas text-lg xl:text-xl tracking-wide">
               {heroContent.vision.description}
             </p>
           </div>
@@ -46,10 +46,10 @@ function Hero() {
           <div
             className="space-y-5 md:w-[50%] 2xl:w-full p-4 bg-white/10 rounded-xl shadow-lg backdrop-blur-md transition-all duration-500 ease-in-out hover:scale-105"
           >
-            <h2 className="text-3xl font-bold font-bebas tracking-wider text-yellow-300">
+            <h2 className="text-3xl font-bold font-bebas tracking-wider xl:tracking-widest text-yellow-300">
               {heroContent.mission.title}
             </h2>
-            <p className="font-bebas text-lg tracking-wide">
+            <p className="font-bebas text-lg xl:text-xl tracking-wide">
               {heroContent.mission.description}
             </p>
           </div>
