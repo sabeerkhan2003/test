@@ -64,14 +64,14 @@ function Landing() {
       {/* </div> */}
       <Vismis />
       <Chooseus />
-      {/* <div className="py-5">
+      <div className="py-5">
         <Gallerysample />
         <div className="flex justify-center py-10 md:pb-10">
           <Link to="/gallery">
             <Button name={"View more"} />
           </Link>
         </div>
-      </div> */}
+      </div>
 
     </>
   );

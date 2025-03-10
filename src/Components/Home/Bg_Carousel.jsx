@@ -18,7 +18,7 @@ function BgCarousel() {
     img.src = imagePaths[index];
   }, []);
   useEffect(() => {
-    preloadImage((currentIndex + 1) % imagePaths.length);
+    preloadImage((currentIndex + 1) % imagePaths.length); // Preload next image once when the component mounts
 
     intervalRef.current = setInterval(() => {
       setCurrentIndex((prevIndex) => {
@@ -29,7 +29,7 @@ function BgCarousel() {
     }, 4000);
 
     return () => clearInterval(intervalRef.current);
-  }, [currentIndex, preloadImage]);
+  }, []);
 
   return (
     <>
