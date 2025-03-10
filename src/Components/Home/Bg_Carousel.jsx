@@ -53,11 +53,11 @@ function BgCarousel() {
 
 
       <div className="absolute inset-0 font-opensans flex flex-col items-center justify-center text-white text-center mx-4">
-        <h1 className="text-2xl flex flex-col lg:gap-3 font-bebas tracking-wider  lg:text-5xl font-bold drop-shadow-xl ">
+        <h1 className="text-3xl flex flex-col lg:gap-3 font-bebas tracking-wider  lg:text-5xl font-bold drop-shadow-xl ">
           <div> Welcome to </div>
-          <span className="text-white "> Kilakarai Bukhari Aalim Arabic College</span>
+          <span className="text-white  "> Kilakarai Bukhari Aalim Arabic College</span>
         </h1>
-        <p className="text-2xl font-bebas tracking-wider lg:text-4xl font-bold mt-2">
+        <p className="text-3xl font-bebas tracking-wider lg:text-4xl font-bold mt-2">
           Admissions <span className="text-red-500">Open 2025</span>
         </p>
         <a
